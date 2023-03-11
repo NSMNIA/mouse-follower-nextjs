@@ -31,7 +31,6 @@ const Layout = ({ children }: LayoutProps) => {
             if (target.dataset) Object.keys(target.dataset).forEach(key => (key.includes("cursor") ? (containsData = true) : null));
             if (!containsData) return;
             const cursor = document.querySelector(`.${CURSOR_NAME}`);
-            console.log(cursor?.classList);
             if (!cursor?.classList) return;
             let cursorClasses = Array.from(cursor?.classList);
             cursorClasses = cursorClasses.filter(className => !className.includes("cursor"));
